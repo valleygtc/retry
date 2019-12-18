@@ -27,19 +27,19 @@ def unstable_func():
 ```python
 @retry((ValueError, TypeError), interval=1, multuplier=2)
 def unstable_func():
-    '''Retry on ValueError or TypeError, sleep 1, 2, 4, 8, ... seconds between attempts.'''
+    """Retry on ValueError or TypeError, sleep 1, 2, 4, 8, ... seconds between attempts."""
 ```
 
 ```python
 @retry((ValueError, TypeError), interval=1, multuplier=2, max_interval=4)
 def unstable_func():
-    '''Retry on ValueError or TypeError, sleep 1, 2, 4, 4, ... seconds between attempts.'''
+    """Retry on ValueError or TypeError, sleep 1, 2, 4, 4, ... seconds between attempts."""
 ```
 
 ```python
 @retry(ValueError, interval=1, addend=1)
 def unstable_func():
-    '''Retry on ValueError, sleep 1, 2, 3, 4, ... seconds between attempts.'''
+    """Retry on ValueError, sleep 1, 2, 3, 4, ... seconds between attempts."""
 ```
 
 注：以上所有使用装饰器的方法均可以等价使用`retry_call`函数。例如：
