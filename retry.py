@@ -3,7 +3,7 @@ from functools import wraps
 import logging
 
 
-_log = logging.getLogger(__name__)
+_logger = logging.getLogger(__name__)
 
 
 def retry_call(
@@ -16,7 +16,7 @@ def retry_call(
     multiplier=1,
     addend=0,
     max_interval=None,
-    logger=_log,
+    logger=_logger,
 ):
     """call func with retry power.
 
@@ -55,7 +55,7 @@ def retry(
     multiplier=1,
     addend=0,
     max_interval=None,
-    logger=_log,
+    logger=_logger,
 ):
     """retry power decorator.
 
